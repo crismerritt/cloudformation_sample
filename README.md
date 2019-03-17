@@ -1,4 +1,4 @@
-#Overview
+# Overview
 This directory contains code that generates 2 CloudFormations templates. 
 Running the generated CF templates creates the following:
 
@@ -8,7 +8,7 @@ Running the generated CF templates creates the following:
 We use Troposhpere to generate the CF templates. Troposhpere is a Python library
 that wraps CloudFormation. See https://github.com/cloudtools/troposphere.
 
-#Quickstart
+# Quickstart
 
 1. Tested with Python 3.7.
 2. Install Python dependencies: **troposhpere** and **awacs**.
@@ -17,7 +17,7 @@ that wraps CloudFormation. See https://github.com/cloudtools/troposphere.
 5. Using CF, deploy first the VPC, then deploy the app-cluster into the VPC.
 
 
-#Files
+# Files
 
 * **make_vpc.py** generates the VPC template. It is self-contained.
 * **make_app_cluster.py** is the main entry point to generate the app-cluster CF template. Start reading here.
@@ -25,5 +25,6 @@ that wraps CloudFormation. See https://github.com/cloudtools/troposphere.
   * **autoscaling_group.py** - creates autoscaling groups and launch configurations
   * **load_balancer.py** - creates a load balancer
   * **security_groups.py** - documents and implements the security group model
+  * **iam.py** - creates an instance profile; it goes in the launch configuration
   * **utils.py** - little one-liner utilities
   * **user_data_api/spa.sh** - user-data scripts for the launch configurations.
